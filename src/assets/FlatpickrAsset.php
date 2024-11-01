@@ -32,7 +32,9 @@ class FlatpickrAsset extends AssetBundle
                 $this->js[] = 'plugins/rangePlugin.js';
             }
             if (ArrayHelper::keyExists('confirmDate', $this->plugins)) {
-                $this->js[] = 'plugins/confirmDate/confirmDate.js';
+               // $this->js[] = 'plugins/confirmDate/confirmDate.js';
+                $this->js[] = Yii::getAlias('@vendor/beaten-sect0r/yii2-flatpickr/src/js/confirmDate.js');
+
                 $this->css[] = 'plugins/confirmDate/confirmDate.css';
             }
             if (ArrayHelper::isIn('label', $this->plugins)) {
